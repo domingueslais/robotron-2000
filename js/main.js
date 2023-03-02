@@ -1,7 +1,14 @@
-const robotron = document.querySelector('#irobotron') 
+const subtrair = document.querySelector('#isubtrair')
+const somar = document.querySelector('#isomar')
+const braco = document.querySelector('#ibraco')
 
-robotron.addEventListener('click', dizOi)
+somar.addEventListener('click',()=> {manipulaDados(somar)})
+subtrair.addEventListener('click',()=>{manipulaDados(subtrair)})
 
-function dizOi() {
-    console.log('oi')
+function manipulaDados (operacao) {
+    if (operacao === somar) {
+        braco.value = parseInt(braco.value) + 1
+    } else {
+        braco.value = parseInt(braco.value) - 1
+    }
 }
